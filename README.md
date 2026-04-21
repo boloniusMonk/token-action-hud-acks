@@ -5,22 +5,17 @@ Token Action HUD support for the Adventurer Conqueror King System (ACKS) in Foun
 ## Features
 
 - Attacks (weapons)
-- Spells (sheet access)
+- Spells
 - Checks (STR, INT, WIL, etc.)
 - Saves
 - Adventuring skills
-- Initiative
-- Clean HUD layout (no nested ACKS tab)
+
 
 ## Requirements
 
 - Foundry VTT v13+
 - Token Action HUD Core
 - ACKS system
-
-## Known Issues
-
-- Spell casting currently opens the sheet (ACKS upstream issue)
 
 ## Installation
 
