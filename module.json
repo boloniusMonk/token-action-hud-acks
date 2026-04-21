@@ -2,7 +2,7 @@
   "id": "token-action-hud-acks",
   "title": "Token Action HUD ACKS",
   "description": "ACKS system support for Token Action HUD Core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     {
       "name": "boloniusmonk"

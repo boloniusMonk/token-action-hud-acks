@@ -24,8 +24,11 @@ Token Action HUD support for the Adventurer Conqueror King System (ACKS) in Foun
 
 ## Installation
 
-Install via manifest URL (see Releases).
+- On Foundry VTT's Configuration and Setup screen, go to Add-on Modules
+- Click Install Module
+- In the Manifest URL field, paste: https://github.com/boloniusMonk/token-action-hud-acks/releases/latest/download/module.json
+- Click Install next to the pasted Manifest URL
 
-## Author
+## Acknowledgements
 
-boloniusmonk
+Portions of this module are adapted from the Token Action HUD 5e module.
