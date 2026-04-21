@@ -1,0 +1,9 @@
+/* Disable Token Action HUD tooltips */
+#token-action-hud .tah-tooltip,
+.tah-tooltip,
+.tooltip.tah-tooltip,
+#token-action-hud [role="tooltip"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
