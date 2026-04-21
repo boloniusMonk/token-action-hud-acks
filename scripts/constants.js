@@ -11,5 +11,6 @@ export const GROUP = {
   checks: { id: "checks", name: "Checks", type: "system" },
   saves: { id: "saves", name: "Saves", type: "system" },
   adventuring: { id: "adventuring", name: "Adventuring", type: "system" },
+  proficiencies: { id: "proficiencies", name: "Proficiencies", type: "system" },
   utility: { id: "utility", name: "Utility", type: "system" }
 };

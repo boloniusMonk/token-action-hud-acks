@@ -22,6 +22,9 @@ Hooks.once("tokenActionHudCoreApiReady", async coreModule => {
         case "adventuring":
           return this.rollAdventuring(this.actor, actionId);
 
+        case "proficiency":
+          return this.rollProficiency(this.actor, actionId);
+
         case "utility":
           return this.performUtilityAction(this.actor, this.token, actionId);
       }
@@ -63,6 +66,17 @@ Hooks.once("tokenActionHudCoreApiReady", async coreModule => {
       if (typeof actor.rollAdventuring === "function") {
         return actor.rollAdventuring(actionId);
       }
+    }
+
+    rollProficiency(actor, actionId) {
+      const item = actor.items.get(actionId);
+      if (!item) return;
+
+      if (typeof item.rollFormula === "function" && item.system?.roll) {
+        return item.rollFormula();
+      }
+
+      return item.sheet?.render(true);
     }
 
     async performUtilityAction(actor, token, actionId) {

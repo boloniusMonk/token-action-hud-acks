@@ -53,6 +53,14 @@ Hooks.once("tokenActionHudCoreApiReady", async coreModule => {
           { ...groups.adventuring, nestId: "adventuring_adventuring" }
         ]
       },
+     {
+        nestId: "proficiencies",
+        id: "proficiencies",
+        name: "Proficiencies",
+        groups: [
+          {...groups.proficiencies, nestId: "proficiencies_proficiencies" }
+        ]
+     },
       {
         nestId: "utility",
         id: "utility",

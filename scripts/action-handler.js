@@ -15,6 +15,7 @@ Hooks.once("tokenActionHudCoreApiReady", async coreModule => {
       this.#buildCheckActions();
       this.#buildSaveActions();
       this.#buildAdventuringActions();
+      this.#buildProficiencyActions();	    
       this.#buildUtilityActions();	    
     }
 
@@ -143,6 +144,33 @@ Hooks.once("tokenActionHudCoreApiReady", async coreModule => {
     }));
 
   this.addActions(actions, { id: GROUP.adventuring.id });
+}
+
+#buildProficiencyActions() {
+  const proficiencies = this.items
+    .filter(item =>
+      item.type === "ability" &&
+      typeof item.rollFormula === "function" &&
+      item.system?.roll
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  if (!proficiencies.length) return;
+
+  const actions = proficiencies.map(item => ({
+    id: item.id,
+    name: item.name,
+    img: item.img,
+    info1: item.system?.rollTarget !== undefined
+      ? { text: `${item.system.rollTarget}+` }
+      : undefined,
+    system: {
+      actionType: "proficiency",
+      actionId: item.id
+    }
+  }));
+
+  this.addActions(actions, { id: GROUP.proficiencies.id });
 }
 
     #buildUtilityActions() {
