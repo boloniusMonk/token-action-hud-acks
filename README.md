@@ -18,10 +18,6 @@ Token Action HUD support for the Adventurer Conqueror King System (ACKS) in Foun
 - Token Action HUD Core
 - ACKS system
 
-## Known Issues
-
-- Spell casting not working right
-
 ## Installation
 
 - On Foundry VTT's Configuration and Setup screen, go to Add-on Modules
